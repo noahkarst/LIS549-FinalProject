@@ -1,0 +1,122 @@
+/* css */
+
+body { 
+    font-family: Helvetica, sans-serif;
+    background: linear-gradient(to bottom, white, #d9d9d9);
+    color: black;
+    height: 150vh;
+}
+
+/* ------------------------------------------------------------ */
+
+.hello {
+    font-size: 2vw;
+    font-weight: normal;
+    transform: translate(0px,0px);
+}
+
+.name {
+    position: absolute;
+    transform: translate(0px,0px);
+    font-size: 10vw;
+  }
+  .name_borders {
+    font-weight: bolder;
+  }
+  .name_borders:before {
+    content: "[";
+    left: 0;
+  }
+  .name_borders:after {
+    content: "]";
+    right: 0;
+  }
+  .name_borders:after, .name_borders:before {
+    position: absolute;
+    animation-name: opacity;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+  }
+  .name_text {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 0 .5em;
+    margin: 0px;
+  }
+  
+  @keyframes opacity {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+/* ------------------------------------------------------------ */
+
+.content {
+    position: absolute;
+    transform: translate(50px,200px);
+    overflow: hidden;
+    font-size: 2vw;
+    font-weight: bold;
+    line-height: 1.2em;
+  }
+  .content__container {
+    overflow: hidden;
+    height: 1.2em;
+  }
+  .content__container:before {
+    content: "";
+    left: 0;
+  }
+  .content__container:after {
+    content: "";
+    right: 0
+  }
+  .content__container:after, .content__container:before {
+    position: absolute;
+    top: 0;
+  }
+  .content__container__text {
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0;
+  }
+  .content__container__list {
+    margin: 0;
+    padding-left: 8em;
+    text-align: left;
+    list-style: none;
+    animation-name: change;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+  .content__container__list__item {
+    line-height: 1.2em;
+    margin: 0;
+  }
+
+  @keyframes change {
+    0%, 12.66%, 100% {
+      transform: translate3d(0, 0, 0);
+    }
+    16.66%, 29.32% {
+      transform: translate3d(0, -25%, 0);
+    }
+    33.32%, 45.98% {
+      transform: translate3d(0, -50%, 0);
+    }
+    49.98%, 62.64% {
+      transform: translate3d(0, -75%, 0);
+    }
+    66.64%, 79.3% {
+      transform: translate3d(0, -50%, 0);
+    }
+    83.3%, 95.96% {
+      transform: translate3d(0, -25%, 0);
+    }
+  }
+
+/* ------------------------------------------------------------ */
